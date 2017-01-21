@@ -1,0 +1,52 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Just Java</string>
+    <string name="Hint">Name</string>
+
+    <!--Header for list of toppings [CHAR LIMIT=20]-->
+    <string name="toppings">Toppings</string>
+
+    <!--Types of toppings-->
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="chocolate_cream">Chocolate Cream</string>
+
+    <!--Header for quantity-->
+    <string name="quantity">Quantity</string>
+
+    <!--Initial Quantity-->
+    <string name="initial_quantity" translatable="false">2</string>
+
+    <!--First recipient of the order-->
+    <string name="email1" translatable="false"><xliff:g id="first_recipient_ID">singhams.shubham571@gmail.com</xliff:g>
+    </string>
+
+    <!--Second recipient of the order-->
+    <string name="email2" translatable="false"><xliff:g id="second_recipient_ID">sanjay.singh7272@gmail.com</xliff:g>
+    </string>
+
+    <!--Email Subject-->
+    <string name="subject">JustJava order for<xliff:g id="name">%s</xliff:g> </string>
+
+    <!--Email Body line 1-->
+    <string name="body_line1">Name: <xliff:g id="user_name" example="Amy">%s</xliff:g></string>
+
+    <!--Email Body Line 2-->
+    <string name="body_line2">Add whipped cream? %b</string>
+
+    <!--Email Body Line 3-->
+    <string name="body_line3">Add chocolate cream? %b</string>
+
+    <!--Quantity-->
+    <string name="quant">Quanity: %d</string>
+
+    <!--Total Price-->
+    <string name="total">Total: </string>
+
+    <!--Thankyou-->
+    <string name="Thankyou">Thankyou!!</string>
+
+    <!--Order Limit Exceded toast Message-->
+    <string name="limitEXC">Order Limit Exceeded!!</string>
+
+    <!--Please Order more Toast Message-->
+    <string name="orderMore">Please order atleast 1 cup of coffee.</string>
+</resources>

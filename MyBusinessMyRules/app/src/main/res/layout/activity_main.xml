@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.mybusinessmyrules.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/topimage"
+        android:src="@drawable/topimage"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/main_pic"
+        android:layout_weight="3"
+        tools:ignore="ContentDescription"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Google Student Associates"
+            android:textAppearance="?android:textAppearanceLarge"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="42dp"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+
+                android:src="@drawable/accimage"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:text="singhams.shubham571@gmail.com" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="42dp"
+                android:src="@drawable/location"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:text="Delhi Technological University, Shahabad Daulatpur, New Delhi" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our Motto"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="15dp"
+            android:textSize="16sp"
+            android:text="We aim at bringing tech savyy children under one roof and giving them all technical assistance needed to change the world.Please send your resume at the above mentioned mail ID."/>
+    </LinearLayout>
+</LinearLayout>
