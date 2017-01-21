@@ -8,19 +8,57 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context="com.example.android.mediatech.MainActivity">
 
-    <Button
-        android:id="@+id/play_btn"
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Play"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:onClick="decrease_volume"
+        android:src="@drawable/ic_volume_down_black_24dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:padding="18dp"
         />
-    <Button
-        android:id="@+id/pause_btn"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/play_btn"
+
+            android:layout_marginTop="85dp"
+            android:layout_marginBottom="215dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Play"
+            />
+        <Button
+            android:id="@+id/pause_btn"
+
+            android:layout_marginBottom="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pause"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:onClick="increase_volume"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pause"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_volume_up_black_24dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:layout_gravity="center"
+        android:padding="18dp"
+        />
 
 </LinearLayout>
