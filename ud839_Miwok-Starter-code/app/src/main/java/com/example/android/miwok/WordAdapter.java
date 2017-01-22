@@ -20,6 +20,8 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter<Word> {
 
     private int mColorId;
+    private int mAudioResourceId;
+
 
     public WordAdapter(Activity context, ArrayList<Word> words,int colorId) {
         super(context, 0, words);
@@ -30,6 +32,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
+
+
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);

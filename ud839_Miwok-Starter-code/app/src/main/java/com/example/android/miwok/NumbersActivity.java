@@ -1,7 +1,10 @@
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -13,7 +16,7 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ArrayList<Word> words = new ArrayList<>();
+        final ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("un", "one", R.drawable.number_one, R.raw.number_one));
         words.add(new Word("deux", "two", R.drawable.number_two, R.raw.number_two));
         words.add(new Word("Trois", "three", R.drawable.number_three, R.raw.number_three));
@@ -28,5 +31,13 @@ public class NumbersActivity extends AppCompatActivity {
         WordAdapter wordAdapter = new WordAdapter(this,words,R.color.category_numbers);
         ListView lv = (ListView) findViewById(R.id.word_list);
         lv.setAdapter(wordAdapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                MediaPlayer mp = MediaPlayer.create(NumbersActivity.this, words.get(i).getAudioResourceId());
+                mp.start();
+            }
+        });
     }
 }

@@ -1,7 +1,10 @@
 package com.example.android.miwok;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -13,7 +16,7 @@ public class PhraseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        ArrayList<Word> phrases = new ArrayList<>();
+        final ArrayList<Word> phrases = new ArrayList<>();
         phrases.add(new Word("Où allez-vous?", "Where are you going?", R.raw.phrase_where_are_you_going));
         phrases.add(new Word("Comment vous appelez-vous?", "What is your name?", R.raw.phrase_what_is_your_name));
         phrases.add(new Word("Mon nom est...", "My name is...", R.raw.phrase_my_name_is));
@@ -28,5 +31,13 @@ public class PhraseActivity extends AppCompatActivity {
         WordAdapter wordAdapter = new WordAdapter(this,phrases,R.color.category_phrases);
         ListView lv = (ListView) findViewById(R.id.word_list);
         lv.setAdapter(wordAdapter);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                MediaPlayer mp = MediaPlayer.create(PhraseActivity.this, phrases.get(i).getAudioResourceId());
+                mp.start();
+            }
+        });
     }
 }
