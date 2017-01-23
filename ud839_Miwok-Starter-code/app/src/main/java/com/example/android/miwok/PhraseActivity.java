@@ -3,6 +3,7 @@ package com.example.android.miwok;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -10,6 +11,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class PhraseActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +34,11 @@ public class PhraseActivity extends AppCompatActivity {
         ListView lv = (ListView) findViewById(R.id.word_list);
         lv.setAdapter(wordAdapter);
 
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.i("PhraseActivity", "Current Word :" + phrases.get(i));
                 MediaPlayer mp = MediaPlayer.create(PhraseActivity.this, phrases.get(i).getAudioResourceId());
                 mp.start();
             }
