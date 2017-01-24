@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                releaseMediaPlayer();
-                mMediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.color_gray);
+                if(mMediaPlayer == null)
+                    mMediaPlayer = MediaPlayer.create(MainActivity.this,R.raw.backstreet);
                 mMediaPlayer.start();
                 mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     @Override
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         if (volume_level >= maxVolume) return;
         float newVolume = Math.min(maxVolume, volume_level + 0.05f * maxVolume);
 
-        am.setStreamVolume(AudioManager.STREAM_MUSIC, (int) Math.ceil(newVolume), AudioManager.FLAG_SHOW_UI);
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, (int) Math.ceil(newVolume), 0);
 
     }
 
