@@ -67,4 +67,9 @@ public class PhraseActivity extends AppCompatActivity {
             mMediaPlayer = null;
         }
     }
+
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
+    }
 }

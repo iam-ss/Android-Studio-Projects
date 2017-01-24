@@ -63,4 +63,9 @@ public class FamilyActivity extends AppCompatActivity {
             mMediaPlayer = null;
         }
     }
+
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
+    }
 }
