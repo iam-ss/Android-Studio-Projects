@@ -10,9 +10,22 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class CategoryAdapter extends FragmentPagerAdapter {
 
+    //    public CategoryAdapter(FragmentManager fm,Context context) {
+//        super(fm);
+//        this.context = context;
+//    }
+//
+    private String[] tabTitle = new String[]{
+            "Numbers", "Family", "Colors", "Phrases"};
+
+    //    private Context context;
     public CategoryAdapter(FragmentManager fm) {
         super(fm);
     }
+//            context.getResources().getString(R.string.category_family),
+//            context.getResources().getString(R.string.category_colors),
+//            context.getResources().getString(R.string.category_phrases)
+//    };
 
     @Override
     public Fragment getItem(int position) {
@@ -30,5 +43,9 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return 4;
+    }
+
+    public CharSequence getPageTitle(int position) {
+        return tabTitle[position];
     }
 }
