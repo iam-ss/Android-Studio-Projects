@@ -9,32 +9,95 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.android.practiceapp.MainActivity">
+    >
 
-    <RadioGroup
-        android:id="@+id/radioSex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textSize="24sp"
+        />
 
-        <RadioButton
-            android:id="@+id/radioMale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_male"
-            android:checked="true"/>
 
-        <RadioButton
-            android:id="@+id/radioFemale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_female"/>
-
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/btnDisplay"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btn_display"/>
+        android:text="TOPPINGS"
+        android:textSize="18sp"
+        android:paddingTop="20dp"
+        android:textStyle="bold"
+
+        />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:text="Whipped Cream"
+        android:textSize="20dp"
+        />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choclate Cream"
+        android:textSize="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUANTITY"
+        android:textSize="20sp"
+        android:paddingTop="15dp"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="30sp"
+            android:layout_marginTop="11dp"
+            android:onClick="Minus"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:id="@+id/textView" />
+
+        <!--tools:text="Madhav"-->
+        <!--android:text="@string/zero"-->
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="30sp"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="90dp"
+            android:onClick="Plus"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="ORDER"
+            android:textSize="15sp"
+            android:layout_below="@id/textView"
+            android:layout_marginTop="23dp"
+            />
+
+    </RelativeLayout>
 
 </LinearLayout>
