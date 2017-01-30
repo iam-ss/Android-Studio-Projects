@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -10,22 +11,21 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class CategoryAdapter extends FragmentPagerAdapter {
 
-    //    public CategoryAdapter(FragmentManager fm,Context context) {
-//        super(fm);
-//        this.context = context;
-//    }
-//
-    private String[] tabTitle = new String[]{
-            "Numbers", "Family", "Colors", "Phrases"};
+    private Context mContext;
+    private String[] tabTitle;
 
-    //    private Context context;
-    public CategoryAdapter(FragmentManager fm) {
+    public CategoryAdapter(Context context, FragmentManager fm) {
         super(fm);
+        mContext = context;
+
+        tabTitle = new String[]{
+                mContext.getString(R.string.category_numbers),
+                mContext.getString(R.string.tab_family),
+                mContext.getString(R.string.category_colors),
+                mContext.getString(R.string.category_phrases)
+        };
     }
-//            context.getResources().getString(R.string.category_family),
-//            context.getResources().getString(R.string.category_colors),
-//            context.getResources().getString(R.string.category_phrases)
-//    };
+
 
     @Override
     public Fragment getItem(int position) {

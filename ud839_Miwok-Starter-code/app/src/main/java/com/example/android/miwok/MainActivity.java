@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());
+        CategoryAdapter adapter = new CategoryAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
