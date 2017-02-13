@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_image"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dlf_promenade_mall" />
+
+
+        <RelativeLayout
+            android:id="@+id/mainTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#ec407a"
+            android:padding="8dp">
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                >
+                <View
+                    android:onClick="clickMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="DLF Promenade Mall"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:paddingRight="18dp"
+                android:paddingTop="22dp"
+                android:paddingLeft="10dp"
+
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                android:src="@drawable/ic_play_arrow_black_24dp"/>
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:id="@+id/addressCardLinearLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#e91e63"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:text="Address"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="Vasant Kunj,\n \n\nNew Delhi-110021" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timingLayout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="#e91e63"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Timings"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/timings"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="10am - 11am" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/metroHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:paddingTop="18dp"
+            android:textStyle="bold"
+            android:textColor="#c51162"
+            android:gravity="center"
+            android:text="Nearest Metro Station"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/metro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#c51162"
+            android:gravity="center"
+            android:text="Subhash Nagar Metro Station" />
+
+        <TextView
+            android:id="@+id/google_maps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:paddingTop="8dp"
+            android:textColor="#FFFFFF"
+            android:paddingBottom="8dp"
+            android:background="#c51162"
+            android:text="Search on Google Maps"
+            android:onClick="open_maps"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+</ScrollView>
