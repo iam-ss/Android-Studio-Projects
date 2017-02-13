@@ -1,22 +1,33 @@
 package com.example.android.outingtime;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class mallActivity extends AppCompatActivity  {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class MallFragment extends Fragment {
+
+
+    public MallFragment() {
+        // Required empty public constructor
+    }
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.list_view,container,false);
 
-        super.onCreate(savedInstanceState);
-        setTheme(R.style.MallTheme);
-        setContentView(R.layout.list_view);
         final ArrayList<Information> malls=new ArrayList<>();
 
         malls.add(new Information("Select CityWalk","A-3 District Centre,\n Saket, New Delhi, \n Delhi 110017","10:30AM – 11PM","Malviya Nagar Metro Station",R.drawable.select_citywalk,R.raw.select,1));
@@ -25,8 +36,8 @@ public class mallActivity extends AppCompatActivity  {
         malls.add(new Information("Pacific Mall","Tagore Garden, Najafgarh Road,New Delhi,\nDelhi 110018","11AM – 9PM","Subhash Nagar Metro Station",R.drawable.pacific_mall,R.raw.pacificmall,1));
         malls.add(new Information("DLF Place Saket","A 4, District Center, \nPress Enclave Road, \nSaket, New Delhi, \nDelhi 110017","10AM – 11PM","Malviya Nagar Metro Station",R.drawable.dlfpace_saket,R.raw.dlfsaket,1));
 
-        InformationAdapter inAdapter = new InformationAdapter(mallActivity.this,malls);
-        ListView lv = (ListView) findViewById(R.id.list_view);
+        InformationAdapter inAdapter = new InformationAdapter(getActivity(),malls);
+        ListView lv = (ListView) rootView.findViewById(R.id.list_view);
         lv.setAdapter(inAdapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -40,11 +51,9 @@ public class mallActivity extends AppCompatActivity  {
                 startActivity(intent);
             }
         });
+
+
+        return rootView;
     }
-
-
-
-
-//    ListView lv = (ListView) findViewById(R.layout.list_view);
 
 }

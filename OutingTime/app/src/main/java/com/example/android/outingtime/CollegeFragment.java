@@ -1,21 +1,32 @@
 package com.example.android.outingtime;
 
+
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class collegeActivity extends AppCompatActivity {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class CollegeFragment extends Fragment {
+
+
+    public CollegeFragment() {
+        // Required empty public constructor
+    }
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_view);
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootview = inflater.inflate(R.layout.list_view,container,false);
         final ArrayList<Information> couples = new ArrayList<>();
 
         couples.add(new Information("Sri Ram College of Commerce","Maurice Nagar, Near University Of Delhi, New Delhi, Delhi 110007","8:30AM-1:30PM","Vishwavidyalaya Metro Station",R.drawable.srcc,R.raw.dlfsaket,4));
@@ -26,8 +37,8 @@ public class collegeActivity extends AppCompatActivity {
         couples.add(new Information("IIT-DELHI","Hauz Khas, New Delhi, Delhi 110016","Visit Anytime","Hauz Khas Metro Station",R.drawable.iit,R.raw.dlfsaket,4));
         couples.add(new Information("Kirori Mal","University of Delhi, North Campus, Delhi, 110007","8:30AM-1:30PM","Vishwavidyalaya Metro Station",R.drawable.kirorimalcollege,R.raw.dlfsaket,4));
 
-        InformationAdapter ia = new InformationAdapter(collegeActivity.this,couples);
-        ListView lv = (ListView) findViewById(R.id.list_view);
+        InformationAdapter ia = new InformationAdapter(getActivity(),couples);
+        ListView lv = (ListView) rootview.findViewById(R.id.list_view);
         lv.setAdapter(ia);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -41,5 +52,7 @@ public class collegeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        return rootview;
     }
+
 }

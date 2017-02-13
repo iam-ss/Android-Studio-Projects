@@ -1,21 +1,32 @@
 package com.example.android.outingtime;
 
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class RestaurantActivity extends AppCompatActivity {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class RestaurantFragment extends Fragment {
+
+
+    public RestaurantFragment() {
+        // Required empty public constructor
+    }
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_view);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.list_view,container,false);
 
         final ArrayList<Information> rests = new ArrayList<>();
 
@@ -25,8 +36,8 @@ public class RestaurantActivity extends AppCompatActivity {
         rests.add(new Information("On the WaterFront","The Lodhi Hotel, Lodhi Road, New Delhi, 110003","12:30 PM-3:50 PM \n 7 PM-11:30 PM","JLN Stadium Metro Station",R.drawable.onthewaterfront,R.raw.dlfsaket,3));
         rests.add(new Information("Lady Baga","P, 3/90, Baba Kharak Singh Marg, Block I, Connaught Place, New Delhi, Delhi 110001","12 Noon to 12:30 AM","Rajiv Chowk",R.drawable.ladybaga,R.raw.dlfsaket,3));
 
-        InformationAdapter ia = new InformationAdapter(RestaurantActivity.this,rests);
-        ListView lv = (ListView) findViewById(R.id.list_view);
+        InformationAdapter ia = new InformationAdapter(getActivity(),rests);
+        ListView lv = (ListView) rootView.findViewById(R.id.list_view);
         lv.setAdapter(ia);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -41,5 +52,7 @@ public class RestaurantActivity extends AppCompatActivity {
             }
         });
 
+        return rootView;
     }
+
 }
