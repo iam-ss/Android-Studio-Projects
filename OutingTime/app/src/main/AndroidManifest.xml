@@ -11,22 +11,13 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".mallActivity"
-            android:label="Malls"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".DetailedInfo"
-            android:label="Information" />
-        <activity
-            android:name=".RestaurantActivity"
-            android:parentActivityName=".RestaurantActivity" />
-        <activity android:name=".couplesActivity" />
-        <activity android:name=".collegeActivity"></activity>
+            android:label="Information"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

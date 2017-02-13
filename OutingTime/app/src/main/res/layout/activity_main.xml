@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.android.outingtime.MainActivity"
     android:id="@+id/activity_main"
@@ -8,74 +9,82 @@
     android:orientation="vertical"
     >
 
-    <FrameLayout
+    <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:id="@+id/viewpager"
         android:layout_weight="1"
-        android:background="@android:color/holo_blue_dark"
-        >
-
-        <TextView
-            android:id="@+id/malls_category"
-            style="@style/category"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="openMalls"
-            android:text="Malls"/>
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@android:color/holo_red_dark"
-        >
-
-        <TextView
-            android:id="@+id/couples_category"
-            style="@style/category"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="openCouples"
-            android:text="Couple Destinations" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@android:color/holo_green_dark"
-        >
-
-        <TextView
-            android:id="@+id/res_category"
-            style="@style/category"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?android:attr/selectableItemBackground"
-
-            android:onClick="openRestaurants"
-            android:text="Restaurants" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@android:color/holo_orange_dark"
-        >
-
-        <TextView
-            android:id="@+id/college_category"
-            style="@style/category"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="openColleges"
-            android:text="Colleges" />
-    </FrameLayout>
+        />
 
 
 </LinearLayout>
+    <!--
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@android:color/holo_blue_dark"
+        >
+
+    <TextView
+        android:id="@+id/malls_category"
+        style="@style/category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="openMalls"
+        android:text="Malls"/>
+    </FrameLayout>
+
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@android:color/holo_red_dark"
+        >
+
+    <TextView
+        android:id="@+id/couples_category"
+        style="@style/category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="openCouples"
+        android:text="Couple Destinations" />
+    </FrameLayout>
+
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@android:color/holo_green_dark"
+        >
+
+    <TextView
+        android:id="@+id/res_category"
+        style="@style/category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+
+        android:onClick="openRestaurants"
+        android:text="Restaurants" />
+    </FrameLayout>
+
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@android:color/holo_orange_dark"
+        >
+
+    <TextView
+        android:id="@+id/college_category"
+        style="@style/category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="openColleges"
+        android:text="Colleges" />
+    </FrameLayout>
+    -->
