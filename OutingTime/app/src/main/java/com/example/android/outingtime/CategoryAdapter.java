@@ -12,9 +12,17 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class CategoryAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
+    private String[] tabTitle;
     public CategoryAdapter(Context context, FragmentManager fm){
         super(fm);
         mContext = context;
+
+        tabTitle = new String[]{
+            mContext.getString(R.string.tab_mall),
+            mContext.getString(R.string.tab_couples),
+            mContext.getString(R.string.tab_rest),
+            mContext.getString(R.string.tab_college)
+        };
     }
 
     @Override
@@ -28,5 +36,9 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return 4;
+    }
+
+    public CharSequence getPageTitle(int position){
+        return tabTitle[position];
     }
 }
