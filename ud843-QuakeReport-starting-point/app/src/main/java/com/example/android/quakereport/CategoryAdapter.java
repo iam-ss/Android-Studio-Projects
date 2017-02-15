@@ -18,7 +18,7 @@ public class CategoryAdapter extends ArrayAdapter {
 
     Context mContext;
 
-    public CategoryAdapter(Context context, ArrayList<Information> earthquake_info) {
+    public CategoryAdapter(Context context, ArrayList<Earthquake> earthquake_info) {
         super(context, 0, earthquake_info);
     }
 
@@ -32,15 +32,15 @@ public class CategoryAdapter extends ArrayAdapter {
             );
         }
 
-        Information info =(Information) getItem(position);
+        Earthquake info =(Earthquake) getItem(position);
         TextView tv= (TextView) listItemView.findViewById(R.id.magView);
-        tv.setText(String.valueOf(info.mMag));
+        tv.setText(String.valueOf(info.getmMag()));
 
         tv = (TextView) listItemView.findViewById(R.id.cityView);
-        tv.setText(info.mCity);
+        tv.setText(info.getmCity());
 
         tv = (TextView) listItemView.findViewById(R.id.dateView);
-        tv.setText(String.valueOf(info.mDate));
+        tv.setText(String.valueOf(info.getmDate()));
 
         return listItemView;
     }
