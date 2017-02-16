@@ -2,30 +2,72 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list_item"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/magView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        tools:text="7.2"/>
-    <TextView
-        android:id="@+id/cityView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        tools:text="San Francisco"
-        android:gravity="right"
-        android:layout_weight="1"
-        android:padding="16dp"/>
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/dateView"
+        android:id="@+id/magView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/magnitude_circle"
+        android:textSize="16sp"
+        tools:text="7.2" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/nearBy"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:text="San Francisco" />
+
+        <TextView
+            android:id="@+id/cityView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:text="San Francisco" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Feb 2,2016"
-        android:padding="16dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/dateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            tools:text="Feb 2,2016" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textAllCaps="true"
+            tools:text="08:02 am" />
+
+    </LinearLayout>
 
 </LinearLayout>
