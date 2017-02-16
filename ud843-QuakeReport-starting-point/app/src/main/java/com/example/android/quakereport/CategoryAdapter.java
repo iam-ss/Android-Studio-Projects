@@ -3,6 +3,7 @@ package com.example.android.quakereport;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +59,8 @@ public class CategoryAdapter extends ArrayAdapter {
 
         GradientDrawable magnitudeCircle = (GradientDrawable) tv.getBackground();
         int magnitudeColor = getMagnitudeColor(mag);
-        magnitudeCircle.setColor(listItemView.getResources().getColor(magnitudeColor));
+//        magnitudeCircle.setColor(listItemView.getResources().getColor(magnitudeColor));
+        magnitudeCircle.setColor(ContextCompat.getColor(getContext(),magnitudeColor));
 
         if(info.getmCity().contains("of")){
             String[] completeLocation = info.getmCity().split("(?<=of)");
