@@ -59,11 +59,10 @@ public class CategoryAdapter extends ArrayAdapter {
 
         GradientDrawable magnitudeCircle = (GradientDrawable) tv.getBackground();
         int magnitudeColor = getMagnitudeColor(mag);
-//        magnitudeCircle.setColor(listItemView.getResources().getColor(magnitudeColor));
         magnitudeCircle.setColor(ContextCompat.getColor(getContext(),magnitudeColor));
 
         if(info.getmCity().contains("of")){
-            String[] completeLocation = info.getmCity().split("(?<=of)");
+            String[] completeLocation = info.getmCity().split("(?<=of )");
 
             tv = (TextView) listItemView.findViewById(R.id.nearBy);
             tv.setText(completeLocation[0]);
